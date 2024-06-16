@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent, FooterComponent } from '../../components';
 
 @Component({
   selector: 'app-default-layout',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: './default-layout.component.html',
   styleUrl: './default-layout.component.scss'
 })

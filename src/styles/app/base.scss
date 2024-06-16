@@ -1,0 +1,5 @@
+@use "themes" as t;
+
+body {
+  background-color: t.$light;
+}

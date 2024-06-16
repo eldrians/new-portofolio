@@ -1,0 +1,5 @@
+@use "themes" as t;
+
+p {
+    color: t.get-color('neutral', 900);
+}

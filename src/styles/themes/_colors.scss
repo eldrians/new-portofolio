@@ -1,4 +1,6 @@
 $light: #F7FCFC;
+$dark: #151515;
+$transparent: transparent;
 
 $colors: (
   'primary': (
@@ -83,75 +85,3 @@ $colors: (
   $config: map-get($colors, $color);
   @return map-get($config, $shade);
 }
-
-@mixin linear-gradient($color1, $shade1: 400, $color2, $shade2: 400, $direction: to bottom) {
-  $color-start: get-color($color1, $shade1);
-  $color-end: get-color($color2, $shade2);
-  background: linear-gradient($direction, $color-start, $color-end);
-}
-
-
-
-
-//Primary colors
-$primary_color: #3c5060;
-$accent_color: #75c6cb;
-$surface_color: #eaf1f5;
-$background_color: #ffffff;
-$surface_color_app: #f0f3f5;
-$header_color: #f0f3f5;
-$border_color: #3c50605c;
-$icon_color: #637380;
-$transparent: transparent;
-
-//Secondary colors
-$red: #e5646e;
-$pink: #bd7a9c;
-$orange: #e9a677;
-$yellow: #fec855;
-$green: #8cb5a1;
-$blue: #759ccb;
-$purple: #7a64a7;
-$shadow_base_color: #00000014;
-$black: #000000;
-$white: #ffffff;
-$less-white: #f2f2f2;
-
-// skeleton colors
-$skeleton-base: #cbcbcb;
-$skeleton-accent: #9f9f9f;
-$skeleton-shadow: rgba(0, 0, 0, 0.0784313725);
-
-// spinner
-$spinner_overlay: rgba(242, 242, 242, 0.21);
-
-// mental state / feeling colors
-$terrible: #bd7a9c;
-$sad: #e9a677;
-$okay: #ebd142;
-$fine: #8cb5a1;
-$great: #75c6cb;
-
-// single course
-$img-background: rgba(#b14a7d, 0.14);
-
-// challenge
-$brown-gray: #707070;
-$decline-red: #ef537d;
-
-// lockscreen
-$button-disable: #cfd4d8;
-
-// audio player
-$progess-color: #9f9f9d;
-
-// navbar-dark
-$dark-navbar: #14151a;
-
-// popup background color
-$popup-background: #00000081;
-
-// calendar specific
-$day_background: #f0f3f53d;
-$past_day_background: #f2f2f2;
-$after_day_border_color: #dbdbdb;
