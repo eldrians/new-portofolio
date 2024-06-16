@@ -1,5 +1,13 @@
 @use "themes" as t;
+@use "includes" as i;
 
-p {
-    color: t.get-color('neutral', 900);
+.navbar {
+  @include i.flex-row(center, space-between);
+  &__left {
+  }
+
+  &__right {
+    @include i.flex-row(center, space-between);
+    gap:1rem;
+  }
 }
