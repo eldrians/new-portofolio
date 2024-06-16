@@ -3,11 +3,12 @@
 
 .navbar {
   @include i.flex-row(center, space-between);
+  background-color: yellow;
   &__left {
+    
   }
 
   &__right {
     @include i.flex-row(center, space-between);
-    gap:1rem;
   }
 }
