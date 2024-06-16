@@ -1,0 +1,23 @@
+$base-font-weight: 400;
+$base-font-size: 14px;
+$base-font-size-lg: 16px;
+$base-font-family: 'Lato', 'Roboto', 'Open Sans', sans-serif;
+
+$font-sizes: (
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'md': 1rem,
+  'lg': 1.25rem,
+  'xl': 1.5rem,
+  '2xl': 2rem,
+  '3xl': 2.5rem,
+  '4xl': 3rem
+);
+
+@function font-size($size) {
+  @return map-get($font-sizes, $size);
+}
+
+@mixin font-bold() {
+  font-family: 'Lato-Bold', 'Roboto', 'Open Sans', sans-serif !important;
+}

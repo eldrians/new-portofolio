@@ -1,0 +1,157 @@
+$light: #F7FCFC;
+
+$colors: (
+  'primary': (
+    900: #004743,
+    800: #006361,
+    700: #007372,
+    600: #008283,
+    500: #008F90,
+    400: #00A0A3,
+    300: #34B0B5,
+    200: #75C7CB,
+    100: #ADDCE0,
+    0: #F7FCFC,
+  ),
+  'secondary': (
+    900: #2A3A48,
+    800: #3C5060,
+    700: #4B6376,
+    600: #5B778D,
+    500: #607E95,
+    400: #95ACC0,
+    300: #B2C4D4,
+    200: #CDDCE8,
+    100: #E9F1FB,
+    50: #F1F5FA,
+    0: #FFFFFF
+  ),
+  'neutral': (
+    900: #2A3A48,
+    800: #3C5060,
+    700: #4B6376,
+    600: #5B778D,
+    500: #607E95,
+    400: #95ACC0,
+    300: #B2C4D4,
+    200: #CDDCE8,
+    100: #E9F1FB,
+    50: #F1F5FA,
+    0: #FFFFFF
+  ),
+  'error': (
+    900: #bf1105,
+    700: #da2b1e,
+    400: #f65142,
+    200: #f59994,
+    100: #ffcccf,
+    50: #ffebed,
+  ),
+  'warning': (
+    900: #FA7413,
+    800: #FCA52F,
+    700: #FFBD35,
+    400: #FFE959,
+    200: #FFF39E,
+    50: #FFFCE7,
+  ),
+  'success': (
+    900: #006B24,
+    800: #009C45,
+    700: #10BE5B,
+    400: #70D38E,
+    200: #C3EBCE,
+    50: #E6F7EB,
+  ),
+  'blue': (
+    800: #759CCB,
+    600: #88A8D6,
+    400: #BACDE5,
+    200: #DCE5F2,
+    50: #F1F5FA,
+  ),
+  'magenta': (
+    800: #BD7A9C,
+    600: #CD9BB5,
+    400: #E4C9D7,
+    200: #EEDDE6,
+    50: #FAF4F7,
+  )
+);
+
+@function get-color($color, $shade: 400) {
+  $config: map-get($colors, $color);
+  @return map-get($config, $shade);
+}
+
+@mixin linear-gradient($color1, $shade1: 400, $color2, $shade2: 400, $direction: to bottom) {
+  $color-start: get-color($color1, $shade1);
+  $color-end: get-color($color2, $shade2);
+  background: linear-gradient($direction, $color-start, $color-end);
+}
+
+
+
+
+//Primary colors
+$primary_color: #3c5060;
+$accent_color: #75c6cb;
+$surface_color: #eaf1f5;
+$background_color: #ffffff;
+$surface_color_app: #f0f3f5;
+$header_color: #f0f3f5;
+$border_color: #3c50605c;
+$icon_color: #637380;
+$transparent: transparent;
+
+//Secondary colors
+$red: #e5646e;
+$pink: #bd7a9c;
+$orange: #e9a677;
+$yellow: #fec855;
+$green: #8cb5a1;
+$blue: #759ccb;
+$purple: #7a64a7;
+$shadow_base_color: #00000014;
+$black: #000000;
+$white: #ffffff;
+$less-white: #f2f2f2;
+
+// skeleton colors
+$skeleton-base: #cbcbcb;
+$skeleton-accent: #9f9f9f;
+$skeleton-shadow: rgba(0, 0, 0, 0.0784313725);
+
+// spinner
+$spinner_overlay: rgba(242, 242, 242, 0.21);
+
+// mental state / feeling colors
+$terrible: #bd7a9c;
+$sad: #e9a677;
+$okay: #ebd142;
+$fine: #8cb5a1;
+$great: #75c6cb;
+
+// single course
+$img-background: rgba(#b14a7d, 0.14);
+
+// challenge
+$brown-gray: #707070;
+$decline-red: #ef537d;
+
+// lockscreen
+$button-disable: #cfd4d8;
+
+// audio player
+$progess-color: #9f9f9d;
+
+// navbar-dark
+$dark-navbar: #14151a;
+
+// popup background color
+$popup-background: #00000081;
+
+// calendar specific
+$day_background: #f0f3f53d;
+$past_day_background: #f2f2f2;
+$after_day_border_color: #dbdbdb;
