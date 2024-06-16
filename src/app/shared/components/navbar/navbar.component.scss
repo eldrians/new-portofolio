@@ -3,7 +3,7 @@
 
 .navbar {
   @include i.flex-row(center, space-between);
-  padding: 1rem 0.825rem;
+  padding: 1.25rem 0.825rem;
   &__left {
     img {
       width: 150px;

@@ -1,0 +1,36 @@
+@use "themes" as t;
+@use "includes" as i;
+
+.home-container {
+  @include i.flex-column(center, center);
+}
+
+.hero-section {
+  margin-top: 4rem;
+  width: 100%;
+  height: 70svh;
+  @include i.flex-row(center, center);
+  position: relative;
+  border: 1px solid t.$light;
+  .hero-title {
+    position: absolute;
+    margin: 3rem 2rem;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    @include i.flex-column(flex-start, center);
+    h1 {
+      font-size: 4rem;
+      font-weight: lighter;
+    }
+  }
+
+  .hero-image {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    img {
+      width: 50vw;
+    }
+  }
+}
