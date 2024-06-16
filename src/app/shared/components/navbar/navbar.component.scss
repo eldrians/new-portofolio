@@ -3,12 +3,22 @@
 
 .navbar {
   @include i.flex-row(center, space-between);
-  background-color: yellow;
+  padding: 1rem 0.825rem;
   &__left {
-    
+    img {
+      width: 150px;
+    }
   }
 
   &__right {
     @include i.flex-row(center, space-between);
+    gap: 2rem;
+    a {
+      color: t.$light;
+      font-weight: 100;
+      &.active {
+        font-weight: 900;
+      }
+    }
   }
 }

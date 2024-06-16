@@ -1,11 +1,11 @@
 @use "includes" as i;
 
 .default {
+  width: 100%;
+  height: 100%;
+  @include i.flex(flex-start, center);
+  &__content {
     width: 100%;
-    height: 100%;
-    @include i.flex(flex-start, center);
-    &__content{
-        width: 100%;
-        max-width: 80%;
-    }
+    max-width: 80%;
+  }
 }
