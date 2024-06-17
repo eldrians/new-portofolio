@@ -1,0 +1,12 @@
+<div
+  [ngStyle]="{ 'background-image': 'url(' + imageUrlBase + ')' }"
+  [ngClass]="{ loaded: isLoaded }"
+  class="base-image"
+>
+  <img
+    [src]="imageUrl"
+    [ngClass]="{ 'image-loaded': isLoaded }"
+    loading="lazy"
+    (load)="onImageLoad()"
+  />
+</div>

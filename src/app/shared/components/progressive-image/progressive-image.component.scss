@@ -1,0 +1,18 @@
+.base-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+
+  &.loaded {
+    filter: none;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  &.loaded {
+    opacity: 1;
+  }
+}
