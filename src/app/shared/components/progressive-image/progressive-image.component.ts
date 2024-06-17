@@ -2,7 +2,7 @@ import { NgClass, NgStyle } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-progressive-image',
+  selector: 'progressive-image',
   standalone: true,
   imports: [NgStyle, NgClass],
   templateUrl: './progressive-image.component.html',
@@ -17,5 +17,4 @@ export class ProgressiveImageComponent {
   public onImageLoad() {
     this.isLoaded = true;
   }
-
 }
