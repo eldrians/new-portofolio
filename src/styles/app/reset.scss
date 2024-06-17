@@ -30,6 +30,26 @@ select {
   font: inherit;
 }
 
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  /* Remove default padding */
+  padding: 0;
+  /* Remove default border */
+  border: none;
+  /* Ensure the button text is not affected by inheritance */
+  font-family: inherit;
+  font-size: inherit;
+  /* Reset other styles as needed */
+  /* Example: */
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  /* Ensure consistent box-sizing */
+  box-sizing: border-box;
+}
+
 p,
 h1,
 h2,

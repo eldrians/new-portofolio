@@ -6,31 +6,123 @@
 }
 
 .hero-section {
-  margin-top: 4rem;
-  width: 100%;
-  height: 70svh;
-  @include i.flex-row(center, center);
   position: relative;
-  border: 1px solid t.$light;
-  .hero-title {
-    position: absolute;
-    margin: 3rem 2rem;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    @include i.flex-column(flex-start, center);
-    h1 {
-      font-size: 4rem;
-      font-weight: lighter;
+  margin: 3rem 0;
+  @include i.flex-row(center, flex-end);
+  width: 100%;
+  height: fit-content;
+
+  .hero-card {
+    width: 60%;
+    height: 400px;
+    background-color: t.get-color("primary", 900);
+    border-radius: 1rem;
+    box-shadow: 0 0 3rem rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
     }
   }
 
-  .hero-image {
+  .hero-content {
+    @include i.flex-column(flex-start, flex-start);
+    gap: 1rem;
+
+    top: 0;
+    left: 40%;
+    padding: 2rem 1rem 2rem 0;
+    transform: translateX(-60%);
     position: absolute;
-    z-index: 1;
-    right: 0;
-    img {
-      width: 50vw;
+    width: fit-content;
+    height: 100%;
+
+    &__title {
+      pointer-events: none;
+
+      padding: 0 1rem;
+      background-color: t.$light;
+      font-weight: lighter;
+      font-size: 3rem;
+      color: t.$dark;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    &__subTitle {
+      pointer-events: none;
+      width: 95%;
+      color: t.$light;
+    }
+
+    &__nav {
+      @include i.flex-row();
+      gap: 1rem;
+      padding-top: 1rem;
+
+      button {
+        padding: 0.5rem 3rem;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .button-explore {
+        border: 1px solid t.$light;
+      }
+
+      .button-explore:hover {
+        background-color: t.$light;
+
+        a {
+          color: t.$dark;
+        }
+      }
+
+      .button-explore:active {
+        background-color: t.get-color("error", 700);
+        border: 1px solid t.get-color("error", 700);
+        a {
+          color: t.$dark;
+        }
+      }
+
+      .button-about {
+        background-color: t.$light;
+        a {
+          color: t.$dark;
+        }
+      }
+
+      .button-about:hover {
+        border: 1px solid t.$light;
+        background-color: t.$dark;
+        a {
+          color: t.$light;
+        }
+      }
+
+      .button-about:active {
+        border: 1px solid t.get-color("error", 700);
+        background-color: t.$dark;
+        a {
+          color: t.get-color("error", 700);
+        }
+      }
+      
     }
   }
+}
+
+::selection {
+  background: t.get-color("error", 700);
+  color: t.$dark;
+}
+
+::-moz-selection {
+  background: t.get-color("error", 700);
+  color: t.$dark;
 }
