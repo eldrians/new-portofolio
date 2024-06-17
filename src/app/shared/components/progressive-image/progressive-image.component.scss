@@ -3,7 +3,7 @@
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(10px);
+  filter: blur(1rem);
 
   &.loaded {
     filter: none;
