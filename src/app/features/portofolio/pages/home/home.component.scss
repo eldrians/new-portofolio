@@ -28,17 +28,27 @@
     }
   }
 
+  @keyframes hero-movement {
+    to {
+      bottom: 120px;
+    }
+  }
+
   .hero-content {
     @include i.flex-column(flex-start, flex-start);
     gap: 1rem;
 
-    top: 0;
+    bottom: 0;
     left: 40%;
     padding: 2rem 1rem 2rem 0;
     transform: translateX(-60%);
     position: absolute;
     width: fit-content;
-    height: 100%;
+    height: fit-content;
+    transform-origin: left;
+    animation: hero-movement linear;
+    animation-timeline: view();
+    animation-range-start: 800px;
 
     &__title {
       pointer-events: none;
@@ -119,7 +129,7 @@
 .recap-section {
   width: 100%;
   height: 80vh;
-//   border: 1px solid white;
+  //   border: 1px solid white;
 
   img {
     width: 100%;

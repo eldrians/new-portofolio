@@ -1,4 +1,24 @@
+@use "themes" as t;
 @use "includes" as i;
+
+.scroll-watcher {
+  height: 5px;
+  position: fixed;
+  top: 0;
+  background-color: t.$light;
+  z-index: 1000;  
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
 
 .default {
   width: 100%;
@@ -6,6 +26,6 @@
   @include i.flex(flex-start, center);
   &__content {
     width: 100%;
-    max-width: 80%;
+    max-width: 70rem;
   }
 }
