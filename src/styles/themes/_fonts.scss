@@ -1,23 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  font-family: Inter, sans-serif;
+}
+
 $base-font-weight: 400;
 $base-font-size: 14px;
 $base-font-size-lg: 16px;
-$base-font-family: 'Lato', 'Roboto', 'Open Sans', sans-serif;
+$base-font-family: "Lato", "Roboto", "Open Sans", sans-serif;
 
 $font-sizes: (
-  'xs': 0.75rem,
-  'sm': 0.875rem,
-  'md': 1rem,
-  'lg': 1.25rem,
-  'xl': 1.5rem,
-  '2xl': 2rem,
-  '3xl': 2.5rem,
-  '4xl': 3rem
+  xs: 0.75rem,
+  sm: 1rem,
+  base: 1.25rem,
+  xl: 2.25rem,
+  xxl: 3.5rem,
+  xxxl: 5rem,
 );
 
 @function font-size($size) {
   @return map-get($font-sizes, $size);
 }
 
+$font-weights: (
+  thin: 200,
+  regular: 400,
+  bold: 700,
+  extrabold: 900,
+);
+
+@function font-weight($value) {
+  @return map-get($font-weights, $value);
+}
+
+
 @mixin font-bold() {
-  font-family: 'Lato-Bold', 'Roboto', 'Open Sans', sans-serif !important;
+  font-family: "Lato-Bold", "Roboto", "Open Sans", sans-serif !important;
 }

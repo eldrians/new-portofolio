@@ -1,36 +1,46 @@
 @use "themes" as t;
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
-
-* {
-  font-family: Merriweather, sans-serif;
-}
 
 p,
 a,
+span,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: t.$light;
+  color: var(--light-color);
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
+:is(h1, .h1) {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
 }
 
-h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
+:is(h2, .h2) {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
 }
 
-p {
-  font-size: 1rem;
+:is(h3, .h3) {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+}
+
+:is(h4, .h4) {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+}
+
+:is(h5, h6, p, span, a){
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
 }
 
 a {
-  font-size: 1rem;
   text-decoration: none;
+}
+
+.italic {
+  font-style: italic;
 }

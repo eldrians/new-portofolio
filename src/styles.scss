@@ -1,2 +1,25 @@
 @use "./styles/app";
-@use "./styles/themes" as t;
+@use "./styles/themes" as T;
+
+:root {
+    
+    // FONT_SIZE
+    --font-size-xs: #{T.font-size(xs)};
+    --font-size-sm: #{T.font-size(sm)};
+    --font-size-base: #{T.font-size(base)};
+    --font-size-xl: #{T.font-size(xl)};
+    --font-size-xxl: #{T.font-size(xxl)};
+    --font-size-xxxl: #{T.font-size(xxxl)};
+
+    // FONT_WEIGHT
+    --font-weight-thin: #{T.font-weight(thin)};
+    --font-weight-regular: #{T.font-weight(regular)};
+    --font-weight-bold: #{T.font-weight(bold)};
+    --font-weight-extrabold: #{T.font-weight(extrabold)};
+
+    // color;
+    --light-color: #{T.$light};
+    --light-dark: #{T.$dark};
+}
+
+
