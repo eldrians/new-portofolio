@@ -20,12 +20,7 @@
   }
 }
 
-.default {
+.default-layout {
   width: 100%;
   height: fit-content;
-  @include i.flex(flex-start, center);
-  &__content {
-    width: 100%;
-    max-width: 70rem;
-  }
 }
