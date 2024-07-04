@@ -4,13 +4,17 @@ body {
   background-color: t.$light;
 }
 
-html{
-  overflow: -moz-scrollbars-none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
-  scrollbar-width: none; /* For Firefox */
+*{
   scroll-behavior: smooth;
 }
 
-body::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
-}
+// html{
+//   overflow: -moz-scrollbars-none; /* For Firefox */
+//   -ms-overflow-style: none; /* For Internet Explorer and Edge */
+//   scrollbar-width: none; /* For Firefox */
+//   scroll-behavior: smooth;
+// }
+
+// body::-webkit-scrollbar {
+//   display: none; /* For Chrome, Safari, and Opera */
+// }
