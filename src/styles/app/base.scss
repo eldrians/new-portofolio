@@ -8,13 +8,13 @@ body {
   scroll-behavior: smooth;
 }
 
-// html{
-//   overflow: -moz-scrollbars-none; /* For Firefox */
-//   -ms-overflow-style: none; /* For Internet Explorer and Edge */
-//   scrollbar-width: none; /* For Firefox */
-//   scroll-behavior: smooth;
-// }
+html{
+  overflow: -moz-scrollbars-none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+  scroll-behavior: smooth;
+}
 
-// body::-webkit-scrollbar {
-//   display: none; /* For Chrome, Safari, and Opera */
-// }
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}

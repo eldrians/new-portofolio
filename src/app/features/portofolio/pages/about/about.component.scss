@@ -4,6 +4,76 @@
 .about-section {
   width: 100vw;
   height: 100vh;
-  height: 100svh;
-  background-color: gray;
+  border-radius: 1rem 1rem 0 0;
+  background-color: white;
+  padding: 5rem 3rem;
+
+  @include i.flex-row(center, center);
+
+  &__title {
+    width: 30%;
+    height: 100%;
+
+    h1 {
+      font-size: 6rem;
+      line-height: 1;
+    }
+  }
+
+  &__detail {
+    width: 70%;
+    height: 100%;
+    @include i.flex-column(flex-start, flex-start);
+    gap: 1rem;
+
+    p {
+      font-size: 2rem;
+      font-weight: var(--font-weight-bold);
+    }
+
+    .main-skill {
+      font-size: 1.75rem;
+      font-weight: var(--font-weight-regular);
+    }
+
+    .current-position {
+      @include i.flex-row(flex-start, flex-start);
+      gap: 1rem;
+
+      &__company {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.75rem;
+        background-color: rgba(0,0,0,0.1);
+        overflow: hidden; /* Ensure content inside doesn't overflow the rounded corners */
+        @include i.flex(center, center);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+        .company-image {
+          width: 2.25rem;
+          height: 2.25rem;
+          border-radius: 0.5rem;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire container without stretching */
+          }
+        }
+      }
+
+      &__role {
+        width: fit-content;
+        height: fit-content;
+        border-radius: 0.75rem;
+
+        @include i.flex-column(flex-start, flex-start);
+
+        .role {
+          font-weight: var(--font-weight-bold);
+        }
+      }
+    }
+  }
 }
